@@ -9,7 +9,16 @@ Siga as instruções abaixo para executar e iniciar a aplicação localmente.
 
 1. Faça uma cópia do arquivo .env.example para .env e defina o USER e o UID:
 
-2. No diretório da aplicação /src, execute o comando:
+Exemplo:
+
+```bash
+#Define UID USER LARAVEL
+USER = laravel
+UID = 1001
+```
+
+
+2. No diretório da aplicação /src (caso não exista crie-o), então, execute o comando:
 
 ```bash
 docker compose exec app composer create-project laravel/laravel .
@@ -26,6 +35,20 @@ http://localhost:8000
 ```
 
 5. Após configurar o arquivo .env do projeto laravel em /src com a definição do banco de dados, execute as migrations:
+
+Exemplo:
+
+```bash
+DB_CONNECTION=mysql
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=laravel
+DB_HOST=db
+DB_PASSWORD=secret
+```
+
+Em seguida, rode as migrations:
+
 ```bash
 docker compose exec app php artisan migrate
 ```
