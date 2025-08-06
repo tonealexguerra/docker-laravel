@@ -16,17 +16,17 @@ Exemplo:
 USER = laravel
 UID = 1001
 ```
+*** Não esqueça de criar o diretório /src ***
 
+2. Execute o build e o Up dos containers:
+```bash
+docker compose build && docker compose up -d
+```
 
-2. No diretório da aplicação /src (caso não exista crie-o), então, execute o comando:
+3. No diretório da aplicação /src, então, execute o comando:
 
 ```bash
 docker compose exec app composer create-project laravel/laravel .
-```
-
-3. Execute o build e o Up dos containers:
-```bash
-docker compose build && docker compose up -d
 ```
 
 4. Acesse o localhost
